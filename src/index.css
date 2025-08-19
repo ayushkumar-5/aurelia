@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AURELIA Luxury Watch Boutique Design System
+   Sophisticated Swiss-inspired dark theme with elegant accents
+   All colors in HSL format for perfect theming
+*/
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --obsidian: 214 25% 4%;        /* #0B0D0F - Primary background */
+    --onyx: 220 14% 8%;           /* #131518 - Surface backgrounds */
+    --ivory: 48 35% 96%;          /* #F7F4EE - Primary text */
+    --champagne: 43 37% 62%;      /* #C6A76F - Luxury accents */
+    --graphite: 210 14% 18%;      /* #2A2E32 - Borders & dividers */
+    --merlot: 0 63% 26%;          /* #6E1B1B - Hover & CTA states */
+    
+    /* Semantic Token Mapping */
+    --background: var(--obsidian);
+    --foreground: var(--ivory);
+
+    --card: var(--onyx);
+    --card-foreground: var(--ivory);
+
+    --popover: var(--onyx);
+    --popover-foreground: var(--ivory);
+
+    --primary: var(--champagne);
+    --primary-foreground: var(--obsidian);
+
+    --secondary: var(--graphite);
+    --secondary-foreground: var(--ivory);
+
+    --muted: var(--graphite);
+    --muted-foreground: 48 15% 70%;
+
+    --accent: var(--champagne);
+    --accent-foreground: var(--obsidian);
+
+    --destructive: var(--merlot);
+    --destructive-foreground: var(--ivory);
+
+    --border: var(--graphite);
+    --input: var(--graphite);
+    --ring: var(--champagne);
+
+    --radius: 0.75rem;
+
+    /* Typography Scale */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Luxury Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--obsidian)), hsl(var(--onyx)));
+    --gradient-champagne: linear-gradient(135deg, hsl(var(--champagne) / 0.1), hsl(var(--champagne) / 0.05));
+    --gradient-card: linear-gradient(145deg, hsl(var(--onyx)), hsl(var(--graphite) / 0.3));
+    
+    /* Elegant Shadows */
+    --shadow-luxury: 0 20px 60px -12px hsl(var(--obsidian) / 0.8);
+    --shadow-card: 0 8px 32px -8px hsl(var(--obsidian) / 0.4);
+    --shadow-glow: 0 0 24px hsl(var(--champagne) / 0.15);
+    
+    /* Smooth Transitions */
+    --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    letter-spacing: 0.01em;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer components {
+  /* Luxury Button Variants */
+  .btn-hero {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 
+           px-8 py-4 rounded-xl font-medium tracking-wide
+           transition-all duration-300 hover:shadow-glow
+           border border-primary/20 hover:border-primary;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent text-foreground border border-border 
+           hover:bg-card hover:border-primary/50
+           px-8 py-4 rounded-xl font-medium tracking-wide
+           transition-all duration-300;
+  }
+  
+  /* Elegant Card */
+  .card-luxury {
+    @apply bg-card border border-border rounded-xl
+           shadow-card backdrop-blur-sm
+           transition-all duration-300 hover:shadow-luxury;
+  }
+  
+  /* Typography Classes */
+  .text-hero {
+    @apply text-5xl md:text-7xl font-bold tracking-wide;
+    font-family: var(--font-heading);
+  }
+  
+  .text-display {
+    @apply text-3xl md:text-4xl font-semibold tracking-wide;
+    font-family: var(--font-heading);
+  }
+  
+  .text-subhead {
+    @apply text-lg md:text-xl text-muted-foreground leading-relaxed;
+  }
+  
+  /* Luxury Animations */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
