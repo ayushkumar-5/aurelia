@@ -1,12 +1,11 @@
-Here’s a **professional README.md** for your watch store project (with your Vercel link included):
 
-````markdown
 # Aurelia — Luxury Watch Store ⌚
 
 Aurelia is a modern, classy e-commerce platform for premium watches.  
 Inspired by Swiss luxury (like Tissot), it combines **minimal UI, elegant typography, and smooth 3D animations** (powered by [Spline](https://spline.design)).
 
 🔗 **Live Demo:** [Aurelia Watch Store](https://aurelia-beige.vercel.app/)
+<img width="1440" height="742" alt="image" src="https://github.com/user-attachments/assets/9b019eaa-cd69-497a-9008-b41f487f3347" />
 
 ---
 
